@@ -13,6 +13,7 @@ module "Web_SG01" {
   source = "git::https://github.com/spandan/tf-sri-01302026//security-groups?ref=main"
   project = "vishwa"
   vpc_id = data.aws_vpc.default.id
+  
 }
 
 data "aws_vpc" "default" {
