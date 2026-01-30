@@ -8,11 +8,8 @@ module "Vms_app1" {
   env = "dev"
 }
 
-output "vm_private_ips01" {
-  value = module.Vms_app1.vm_priv_pips
-}
 module "Web_SG01" {
-  source = "git::https://github.com/sspandan/tf-cs-sri-jan30//ec2-instance?ref=main"
+  source = "git::https://github.com/spandan/tf-sri-01302026//security-groups?ref=main"
   project = "vishwa"
   vpc_id = data.aws_vpc.default.id
 }
