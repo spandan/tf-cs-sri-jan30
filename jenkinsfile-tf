@@ -41,14 +41,15 @@ pipeline {
         sh "terraform apply"
       }
     }
-      stage('Cleanup Workspace') {
+    stage('Cleanup Workspace') {
       steps {
         deleteDir()
       }
-      stage('Cleanup Workspace') {
+    }
+    stage('Cleanup Workspace') {
       steps {
         deleteDir()
       }
-
+    }
   }
 }
