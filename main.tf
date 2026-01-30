@@ -7,11 +7,12 @@ module "Vms_app1" {
   num_of_vm = 1
   env = "dev"
   web_sg = [module.Web_SG01.web_sg_id]
+  user_data = file("scripts/nginx.sh")
 }
 
 module "Web_SG01" {
   source = "git::https://github.com/spandan/tf-sri-01302026//security-groups?ref=main"
-  project = "vishwa"
+  project = "user14"
   vpc_id = data.aws_vpc.default.id
   
 }
