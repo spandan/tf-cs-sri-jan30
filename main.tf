@@ -6,6 +6,7 @@ module "Vms_app1" {
   subnets = ["subnet-084785ce11bb38827", "subnet-0e100c7e306c1812d"]
   num_of_vm = 1
   env = "dev"
+  web_sg = [module.Web_SG01.web_sg_id]
 }
 
 module "Web_SG01" {
