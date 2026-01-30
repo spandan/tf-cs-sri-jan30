@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-west-1"
-}
 
 module "Vms_app1" {
   source = "git::https://github.com/spandan/tf-sri-01302026//ec2-instance?ref=main"
